@@ -20,6 +20,11 @@ The first of the uid(email) is numeric to stand for the order of the base64 stri
 
 First of all had to test how many chars could be put in the uid, turns out after some testing just a little over 2040. Once you enter more than this the key becomes invalid and you have to reset your pubkey. Through some trial and error decided to stick with a safe number 1741 chars long. Once you split the binary data into 1305Byte chunks and convert it to base64 it comes to 1741 chars in length. 
 
+### test file
+
+For those who would like to test already uploaded data, i have placed a test file here:  
+http://eu.pool.sks-keyservers.net/pks/lookup?search=STZFG%40ZDRRX&op=vindex
+
 ### ToDo
 
 Which is best?  
