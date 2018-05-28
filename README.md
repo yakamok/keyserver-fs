@@ -1,4 +1,12 @@
 # keyserver-fs
+    
+### proof of concept on using pgp keyservers for Decentralized file storage
+
+WARNING: this may break easily and is intended for use only on linux, & only for educational purposes.  
+
+Using Python to open a file in binary then break it up and convert to base64 then insert that into a pgp pubring as new uid's. Once uploaded to a keyserver its there forever and propogated to all other key servers, making this a simple decentralised file storage system.  
+
+I wrote this because of the keyservers poor design, anyone can upload any kind of data to them without the option for removal or peer review. Key Base although i am not a fan, require you to sign up and create an account instead of a simple dumping ground for keys that have the potential to contain sensitive data. There are endless ways to abuse this system, I have not even began to explore every option.
 
 ### upload-file.py
 
@@ -7,16 +15,8 @@ Usage: python upload-file.py <file>
 ### download-keyserv.py
 
 Usage: python download-keyserv.py "http://eu.pool.sks-keyservers.net/pks/lookup?search=WCNGKCCWBE@UMKVS.jpg&op=index"  
-    
-### proof of concept on using pgp keyservers for Decentralized file storage
 
-WARNING: this may break easily and is intended for use only on linux  
-
-Using Python to open a file in binary then break it up and convert to base64 then insert that into a pgp pubring as new uid's. Once uploaded to a keyserver its there forever and propogated to all other key servers, making this a simple decentralised file storage system.  
-
-I wrote this because i believe that pgp keyservers are very dangerous because of their poor design, anyone can upload any kind of data to them without the option for removal or peer review. Key Base although i am not a fan, require you to sign up and create an account instead of a simple dumping ground for keys that have the potential to contain sensitive data. There are endless ways to abuse this system, I have not even began to explore every option.
-
-### format used
+### Format used
 
 The first uid has the file extention at the end: random@random.jpg   
 
@@ -30,7 +30,7 @@ First of all had to test how many chars could be put in the uid, turns out after
 
 Key deletion was added after upload is completed as the keys are no longer needed.  
 
-### test file
+### Test file
 
 For those who would like to test already uploaded data, i have placed a test file here:  
 http://eu.pool.sks-keyservers.net/pks/lookup?search=WCNGKCCWBE@UMKVS.jpg&op=index  
