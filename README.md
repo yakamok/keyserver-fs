@@ -12,6 +12,7 @@ I wrote this because of the keyservers poor design, anyone can upload any kind o
 
 Usage: python upload-file.py <file>  
 Data can take between 3-10mins before it apears on the server so don't be supprised if the link your given does not work straight away.  
+Requirements: gnupg2, pinentry  
 
 ### download-keyserv.py
 
