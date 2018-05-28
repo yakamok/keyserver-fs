@@ -16,6 +16,7 @@ Data can take between 3-10mins before it apears on the server so don't be suppri
 ### download-keyserv.py
 
 Usage: python download-keyserv.py "http://eu.pool.sks-keyservers.net/pks/lookup?search=WCNGKCCWBE@UMKVS.jpg&op=index"  
+Requirements: python-bs4  
 
 ### Format used
 
