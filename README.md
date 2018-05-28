@@ -19,3 +19,9 @@ so we used uid's like so:
 The first of the uid(email) is numeric to stand for the order of the base64 string so we can be put it together again in the correct order, then the second part is simply a set chunk of binary data converted to base64.  
 
 First of all had to test how many chars could be put in the uid, turns out after some testing just a little over 2040. Once you enter more than this the key becomes invalid and you have to reset your pubkey. Through some trial and error decided to stick with a safe number 1741 chars long. Once you split the binary data into 1305Byte chunks and convert it to base64 it comes to 1741 chars in length. 
+
+### ToDo
+
+Which is best?
+Create program to parse the data from the site?
+Maybe also download the key locally with import and parse it this way?
