@@ -1,6 +1,8 @@
 # keyserver-fs
 
-Usage: python upload-file.py <file>
+Usage: python upload-file.py <file>  
+
+WARNING: this may break easily and is intended for use only on linux  
 
 ### proof of concept on using pgp keyservers for file storage
 
