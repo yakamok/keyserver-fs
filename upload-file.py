@@ -25,7 +25,7 @@ out, err = p.communicate()
 p=subprocess.Popen('gpg2 --list-key ' + email,shell=True,stdout=subprocess.PIPE)
 out, err = p.communicate()
 
-#do not upload again to the same key as this will mess up retreival of the file later
+#do not upload again to the same key as this will mess up retrieval of the file later
 print email
 key = out.split()[6] # parse out the key so we can use to send keys to the key servers
 
