@@ -12,18 +12,22 @@ I wrote this because i believe that pgp keyservers are very dangerous because of
 
 ### format used
 
+The very first uid is actually the file name in base64 after random@base64-filename.  
+
 so we used uid's like so:  
 
-    1@base64stringhere.com
+    1@base64stringhere
 
 The first of the uid(email) is numeric to stand for the order of the base64 string so we can be put it together again in the correct order, then the second part is simply a set chunk of binary data converted to base64.  
 
 First of all had to test how many chars could be put in the uid, turns out after some testing just a little over 2040. Once you enter more than this the key becomes invalid and you have to reset your pubkey. Through some trial and error decided to stick with a safe number 1741 chars long. Once you split the binary data into 1305Byte chunks and convert it to base64 it comes to 1741 chars in length. 
 
+Key deletion was added after upload is completed as the keys are no longer needed.  
+
 ### test file
 
 For those who would like to test already uploaded data, i have placed a test file here:  
-http://eu.pool.sks-keyservers.net/pks/lookup?search=STZFG%40ZDRRX&op=vindex  
+http://eu.pool.sks-keyservers.net/pks/lookup?search=LVWLG@Y2h1bXAuanBn&op=index
 The file is a ".jpg"  
 
 ### ToDo
@@ -31,6 +35,3 @@ The file is a ".jpg"
 Which is best?  
 Create program to parse the data from the site?  
 Maybe also download the key locally with import and parse it this way?  
-auto generate URL to the stored data from the key server uploaded to  
-add file type to the first uid in base64  
-
