@@ -1,7 +1,13 @@
 # keyserver-fs
 
+### upload-file.py
+
 Usage: python upload-file.py <file>  
 
+### download-keyserv.py
+
+Usage: python download-keyserv.py "http://eu.pool.sks-keyservers.net/pks/lookup?search=WCNGKCCWBE@UMKVS.jpg&op=index"  
+    
 ### proof of concept on using pgp keyservers for Decentralized file storage
 
 WARNING: this may break easily and is intended for use only on linux  
