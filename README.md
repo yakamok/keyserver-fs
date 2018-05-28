@@ -1,5 +1,7 @@
 # keyserver-fs
 
+Usage: python upload-file.py <file>
+
 ### proof of concept on using pgp keyservers for file storage
 
 Using Python to open a file in binary then break it up and convert to base64 then insert that into a pgp pubring as new uid's. Once uploaded to a keyserver its there forever and propogated to all other key servers, making this a simple decentralised file storage system.  
