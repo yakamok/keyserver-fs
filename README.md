@@ -1,6 +1,6 @@
 # Using PGP keyservers for decentralised file storage
     
-### proof of concept on using pgp keyservers for Decentralized file storage
+### This is a proof of concept
 
 WARNING: this may break easily and is intended for use only on linux, & only for educational purposes.  
 
