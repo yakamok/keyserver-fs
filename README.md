@@ -37,6 +37,4 @@ http://eu.pool.sks-keyservers.net/pks/lookup?search=WCNGKCCWBE@UMKVS.jpg&op=inde
  
 ### ToDo
 
-Which is best?  
-Create program to parse the data from the site?  
 Maybe also download the key locally with import and parse it this way?  
