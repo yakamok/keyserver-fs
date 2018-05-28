@@ -13,7 +13,7 @@ else:
 
 #generate random data for credentials
 user_name = ''.join(random.choice(string.ascii_uppercase) for _ in range(10))
-email = ''.join(random.choice(string.ascii_uppercase) for _ in range(5)) + "@" + ''.join(random.choice(string.ascii_uppercase) for _ in range(5))
+email = ''.join(random.choice(string.ascii_uppercase) for _ in range(5)) + "@" + base64.b64encode(file_to_upload)
 passphrase = ''.join(random.choice(string.ascii_uppercase) for _ in range(5))
 key_server = "eu.pool.sks-keyservers.net" #any key server is good as it will propogate world wide
 
@@ -25,8 +25,6 @@ out, err = p.communicate()
 p=subprocess.Popen('gpg2 --list-key ' + email,shell=True,stdout=subprocess.PIPE)
 out, err = p.communicate()
 
-#do not upload again to the same key as this will mess up retrieval of the file later
-print email
 key = out.split()[6] # parse out the key so we can use to send keys to the key servers
 
 #open file in binary and break it up into 1305byte chunks
@@ -51,3 +49,14 @@ for x in chunk_list:
 #finally send keys to a server
 p=subprocess.Popen("gpg2 --keyserver " + key_server + " --send-keys " + key,shell=True,stdout=subprocess.PIPE)
 out, err = p.communicate()
+
+#remove keys when done as they are not needed anymore
+p=subprocess.Popen("gpg --batch --yes --delete-secret-keys " + key + "&& gpg --batch --yes --delete-keys " + key,shell=True,stdout=subprocess.PIPE)
+out, err = p.communicate()
+
+if err == None:
+	print "removing temp keys\n"
+	print "It can take 3-10mins before your key appears on your chosen server\n"
+	print "http://" + key_server + "/pks/lookup?search=" + email.replace('@','%') + "&op=index\n"
+else:
+	print "something went wrong try again"
