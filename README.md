@@ -2,7 +2,7 @@
 
 Usage: python upload-file.py <file>  
 
-### proof of concept on using pgp keyservers for file storage
+### proof of concept on using pgp keyservers for Decentralized file storage
 
 WARNING: this may break easily and is intended for use only on linux  
 
