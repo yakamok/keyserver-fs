@@ -22,6 +22,6 @@ First of all had to test how many chars could be put in the uid, turns out after
 
 ### ToDo
 
-Which is best?
-Create program to parse the data from the site?
-Maybe also download the key locally with import and parse it this way?
+Which is best?  
+Create program to parse the data from the site?  
+Maybe also download the key locally with import and parse it this way?  
