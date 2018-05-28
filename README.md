@@ -31,3 +31,6 @@ The file is a ".jpg"
 Which is best?  
 Create program to parse the data from the site?  
 Maybe also download the key locally with import and parse it this way?  
+auto generate URL to the stored data from the key server uploaded to  
+add file type to the first uid in base64  
+
