@@ -23,7 +23,8 @@ First of all had to test how many chars could be put in the uid, turns out after
 ### test file
 
 For those who would like to test already uploaded data, i have placed a test file here:  
-http://eu.pool.sks-keyservers.net/pks/lookup?search=STZFG%40ZDRRX&op=vindex
+http://eu.pool.sks-keyservers.net/pks/lookup?search=STZFG%40ZDRRX&op=vindex  
+The file is a ".jpg"  
 
 ### ToDo
 
