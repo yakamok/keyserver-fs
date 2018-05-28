@@ -10,6 +10,6 @@ I wrote this because i believe that pgp keyservers are very dangerous because of
 
 so we used uid's like so:  
 
-1@base64stringhere.com  
+  1@base64stringhere.com
 
 The first of the uid(email) is numeric to stand for the order of the base64 string so we can be put it together again in the correct order, then the second part is simply a set chunk of binary data converted to base64.  
