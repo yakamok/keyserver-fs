@@ -37,4 +37,7 @@ http://eu.pool.sks-keyservers.net/pks/lookup?search=WCNGKCCWBE@UMKVS.jpg&op=inde
  
 ### ToDo
 
+Upload multiple files  
+program to check propogation  
+test maxium size that can be uploaded  
 Maybe also download the key locally with import and parse it this way?  
