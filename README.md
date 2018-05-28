@@ -1,4 +1,4 @@
-# keyserver-fs
+# Evil use of PGP key servers as free decentralized file strorage
     
 ### proof of concept on using pgp keyservers for Decentralized file storage
 
