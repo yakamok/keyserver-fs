@@ -10,10 +10,14 @@ if os.path.exists(sys.argv[1]) != True:
 	print "you typed something wrong, could not find that file"
 else:
 	file_to_upload = sys.argv[1]
+	if "." in sys.argv[1]:
+		domain = sys.argv[1][sys.argv[1].index("."):]
+	else:
+		domain = ".com"
 
 #generate random data for credentials
 user_name = ''.join(random.choice(string.ascii_uppercase) for _ in range(10))
-email = ''.join(random.choice(string.ascii_uppercase) for _ in range(5)) + "@" + base64.b64encode(file_to_upload)
+email = ''.join(random.choice(string.ascii_uppercase) for _ in range(10)) + "@" + ''.join(random.choice(string.ascii_uppercase) for _ in range(5)) + domain
 passphrase = ''.join(random.choice(string.ascii_uppercase) for _ in range(5))
 key_server = "eu.pool.sks-keyservers.net" #any key server is good as it will propogate world wide
 
@@ -57,6 +61,6 @@ out, err = p.communicate()
 if err == None:
 	print "removing temp keys\n"
 	print "It can take 3-10mins before your key appears on your chosen server\n"
-	print "http://" + key_server + "/pks/lookup?search=" + email.replace('@','%') + "&op=index\n"
+	print "http://" + key_server + "/pks/lookup?search=" + email + "&op=index"
 else:
 	print "something went wrong try again"
