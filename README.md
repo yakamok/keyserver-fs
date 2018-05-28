@@ -12,7 +12,7 @@ I wrote this because i believe that pgp keyservers are very dangerous because of
 
 ### format used
 
-The very first uid is actually the file name in base64 after random@base64-filename.  
+The first uid has the file extention at the end: random@random.jpg   
 
 so we used uid's like so:  
 
@@ -27,9 +27,8 @@ Key deletion was added after upload is completed as the keys are no longer neede
 ### test file
 
 For those who would like to test already uploaded data, i have placed a test file here:  
-http://eu.pool.sks-keyservers.net/pks/lookup?search=LVWLG@Y2h1bXAuanBn&op=index
-The file is a ".jpg"  
-
+http://eu.pool.sks-keyservers.net/pks/lookup?search=WCNGKCCWBE@UMKVS.jpg&op=index  
+ 
 ### ToDo
 
 Which is best?  
