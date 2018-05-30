@@ -8,8 +8,7 @@ Using Python to open a file in binary then break it up and convert to base64 the
 
 I wrote this because of the keyservers poor design, anyone can upload any kind of data to them without the option for removal or peer review, for example i uploaded the entire GDPR. Key Base although i am not a fan, at least require you to sign up and create an account instead of a simple dumping ground for keys that have the potential to contain sensitive data. There are endless ways to abuse this system, I have not even began to explore every option.
 
-__Notice:__ This Program is very slow to add data to the gpg pubkey so dont plan on super large files, this is also not safe to use in any kind of production enviroment as its using subprocess and shell is set to true.
-
+__Notice:__ This Program is very slow to add data to the gpg pubkey so dont plan on super large files, this is also not safe to use in any kind of production enviroment as its using subprocess and shell is set to true.  
 ### upload-file.py
 
 Usage: python upload-file.py <file>  
@@ -39,7 +38,3 @@ Key deletion was added after upload is completed as the keys are no longer neede
 
 For those who would like to test already uploaded data, i have placed a test file here:  
 http://eu.pool.sks-keyservers.net/pks/lookup?search=WCNGKCCWBE@UMKVS.jpg&op=index  
- 
-### ToDo
-
-test maxium size that can be uploaded  - done this but its too slow to do major files, so books/ images are all ok this use case.  
