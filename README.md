@@ -1,14 +1,17 @@
 # Using PGP keyservers for decentralised file storage
     
-### This is a proof of concept
+### This is a proof of concept for educational use only!
 
 WARNING: this may break easily and is intended for use only on linux, & only for educational purposes.  
 
-Using Python to open a file in binary then break it up and convert to base64 then insert that into a pgp pubring as new uid's. Once uploaded to a keyserver its there forever and propogated to all other key servers, making this a simple decentralised file storage system.  
+So this basicly works because you can have a UID(email address) that is 2048 characters in your PGP key, and from what i understand an unlimited amount of UID's, perfect for dumping data on to the key-servers, Adding UID's is a slow process by hand so i automated it using python, so you could dump any kind of file on the key servers. with some simple modifactions you can dump plain text on to the key-servers containing any content you choose and watch it propogate through all the key-servers around the world. Once that has completed, the data is essentially immortal as no one can remove it.
 
-I wrote this because of the keyservers poor design, anyone can upload any kind of data to them without the option for removal or peer review, for example i uploaded the entire GDPR. Key Base although i am not a fan of, at least require you to sign up and create an account instead of a simple dumping ground for keys that have the potential to contain sensitive data. There are endless ways to abuse this system, I have not even began to explore every option.
+For example there is a copy of the GDPR uploaded to the key-servers, points if someone can find it!
 
-__Notice:__ This Program is very slow to add data to the gpg pubkey so dont plan on super large files, this is also not safe to use in any kind of production enviroment as its using subprocess and shell is set to true.  
+I wrote this because i think this charactaristic of key-servers is actually dangerous, for example someone could upload leaked data and it would be spread around the world and accessible by anyone and unstoppable.
+
+__Notice:__ This Program is very slow to add data to the gpg pubkey so dont plan on super large files.  
+
 ### upload-file.py
 
 Usage: python upload-file.py <file>  
@@ -38,3 +41,22 @@ Key deletion was added after upload is completed as the keys are no longer neede
 
 For those who would like to test already uploaded data, i have placed a test file here:  
 http://eu.pool.sks-keyservers.net/pks/lookup?search=WCNGKCCWBE@UMKVS.jpg&op=index  
+
+### unpublished 
+
+i wrote a version of this using OpenMPI to see what kind of scale this could be used on, its very simple to implement and would allow a user to upload incredible amounts of data to all the key-servers.  
+
+In theory it would be possible with the use of proxys and possibly tor to continually upload leaked data 24hrs a day accross all key-servers making it impossible to control or remove this data.
+
+This is just a proof of concept and a discussion on the potential problems of key-servers in their current form!
+
+DO NOT USE THIS TO DO ANYTHING ILLEGAL
+
+### ToDo
+
+remove the use for pinentry by using no passwords, this is possible in GPGME.
+
+### Notes
+
+why did i not use GPGME?  
+Simply because it has some kind of memory leak which is only noticable when submitting 100's of UID's into a PGP key, then it crashes after all memory has been eaten up. I do not know if this has been fixed in recent issues if it has then its possible to write the data to the PGP key much faster than the above python code is currently able to.  
