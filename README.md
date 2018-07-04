@@ -4,7 +4,7 @@
 
 WARNING: this may break easily and is intended for use only on linux, & only for educational purposes.  
 
-So this basicly works because you can have a UID(email address) that is 2048 characters in your PGP key, and from what i understand an unlimited amount of UID's, perfect for dumping data on to the key-servers, Adding UID's is a slow process by hand so i automated it using python, so you could dump any kind of file on the key servers. with some simple modifactions you can dump plain text on to the key-servers containing any content you choose and watch it propogate through all the key-servers around the world. Once that has completed, the data is essentially immortal as no one can remove it.
+So this basicly works because you can have a UID(email address) that is 2048 characters in your PGP key, and from what i understand an unlimited amount of UID's, perfect for dumping data on to the key-servers, Adding UID's is a slow process by hand so i automated it using python, so you could dump any kind of file on the key servers. with some simple modifactions you can dump plain text on to the key-servers containing any content you choose and watch it propogate through all the key-servers around the world. Once that has completed, the data is essentially impossible to be removed as said by the sks key-server creator him self [Kristian Fiskerstrand](https://blog.sumptuouscapital.com/2016/03/openpgp-certificates-can-not-be-deleted-from-keyservers/).
 
 For example there is a copy of the GDPR uploaded to the key-servers, points if someone can find it!
 
