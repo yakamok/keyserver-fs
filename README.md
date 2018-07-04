@@ -6,13 +6,11 @@ WARNING: this may break easily and is intended for use only on linux, & only for
 
 So this basicly works because you can have a UID(email address) that is 2048 characters in your PGP key, and from what i understand an unlimited amount of UID's, perfect for dumping data on to the key-servers, Adding UID's is a slow process by hand so i automated it using python, so you could dump any kind of file on the key servers. with some simple modifactions you can dump plain text on to the key-servers containing any content you choose and watch it propogate through all the key-servers around the world. Once that has completed, the data is essentially impossible to be removed as said by the sks key-server creator him self [Kristian Fiskerstrand](https://blog.sumptuouscapital.com/2016/03/openpgp-certificates-can-not-be-deleted-from-keyservers/).
 
-For example there is a copy of the GDPR uploaded to the key-servers, points if someone can find it!
-
-I wrote this because i think this charactaristic of key-servers is actually dangerous, for example someone could upload leaked data and it would be spread around the world and accessible by anyone and unstoppable.
+I wrote this because i think this charactaristic of key-servers is actually dangerous, for example someone could upload leaked data and it would be spread around the world and accessible by anyone and unstoppable, how would this situation be delt with?
 
 ### Which Parts of the GDPR this might be effected by:  
 
-I am not a lawyer and i advise always seeking legal advice as i am purly expressing my opinion of what i think and this maybe wrong.
+I am not a lawyer and i advise to always seek legal advice as i am purly expressing my opinion of what i think and this maybe wrong.
 
 __Article 17__ (Right to eraseure('right to be forgotten'))  
 
@@ -24,7 +22,7 @@ point (a) of Article 9(2), and where there is no other legal ground for the proc
 __Article 7(3)__ (Conditions for consent)  
 [The data subject shall have the right to withdraw his or her consent at any time.....It shall be as easy to withdraw as to give consent.]  
 
-I think theres more in the GDPR that could apply to PGP key servers, but i don't have alot of time to look through it at the moment, i will add more when i can. Also suggestions and pull requests with more information is welcome.  
+I think theres more in the GDPR that could apply to PGP key servers but this is not about the GDPR soley its about how data is managed and the responsibility of those who manage it, i will add more when i can. Also suggestions and pull requests with more information is welcome.  
 
 __Notice:__ This Program is very slow to add data to the gpg pubkey so dont plan on super large files.  
 
