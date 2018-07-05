@@ -1,6 +1,6 @@
 # This section points out areas that I believe to effect PGP key-severs
 
-Anyone is welcome to contribute to this document as long as it is not baseless opinions, you must have valid points that can be proven with sections of the GDPR or the Data Protection Act.  
+Anyone is welcome to contribute to this document as long as it is not baseless opinions, you must have valid points that can be backed up with sections of the GDPR or the Data Protection Act.  
 
 ### All information here is taken from the GDPR its self.  
 
