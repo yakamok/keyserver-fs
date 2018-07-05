@@ -1,9 +1,11 @@
 # This section points out areas that I believe to effect PGP key-severs
 
+Anyone is welcome to contribute to this document as long as it is not baseless opinions, you must have valid points that can be proven with sections of the GDPR or the Data Protection Act.  
+
 ### All information here is taken from the GDPR its self.  
 
-__Section 59__ highlights the requirements for those processing personal data to have mechanisms in place to allow them to comply with the GDPR.
-Currently no such mechanisms exist in current key-servers specificly the SKS key-servers.
+__Section 59__ highlights the requirements for those processing personal data to have mechanisms in place to allow them to comply with the GDPR.  
+Currently no such mechanisms exist in current key-servers specificly the SKS key-servers.  
 
 (59) Modalities should be provided for facilitating the exercise of the data subject's rights under this Regulation,
 including mechanisms to request and, if applicable, obtain, free of charge, in particular, access to and rectification
