@@ -10,19 +10,11 @@ I wrote this because i think this charactaristic of key-servers is actually dang
 
 ### Which Parts of the GDPR this might be effected by:  
 
-I am not a lawyer and i advise to always seek legal advice as i am purly expressing my opinion of what i think and this maybe wrong.
+I would be happy for people to make pull requests to add information they think is relevent to this.
 
-__Article 17__ (Right to eraseure('right to be forgotten'))  
+I have moved this section to a seperate document [GDPR and its effects](https://github.com/yakamok/keyserver-fs/blob/master/GDPR.md)
 
-sections 1(b)/2  - the data subject withdraws consent on which the processing is based according to point (a) of Article 6(1), or
-point (a) of Article 9(2), and where there is no other legal ground for the processing;  
-
-1(d) -the personal data have been unlawfully processed;  
-
-__Article 7(3)__ (Conditions for consent)  
-[The data subject shall have the right to withdraw his or her consent at any time.....It shall be as easy to withdraw as to give consent.]  
-
-I think theres more in the GDPR that could apply to PGP key servers but this is not about the GDPR soley its about how data is managed and the responsibility of those who manage it, i will add more when i can. Also suggestions and pull requests with more information is welcome.  
+I think theres more in the GDPR that could apply to PGP key servers but this is not about the GDPR soley its about how data is managed and the responsibility of those who manage it!
 
 __Notice:__ This Program is very slow to add data to the gpg pubkey so dont plan on super large files.  
 
