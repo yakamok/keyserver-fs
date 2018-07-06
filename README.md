@@ -10,9 +10,11 @@ I wrote this because i think this charactaristic of key-servers is actually dang
 
 ### Which Parts of the GDPR this might be effected by:  
 
-I would be happy for people to make pull requests to add information they think is relevent to this.
+I would be happy for people to make pull requests to add information they think is relevent to this.  
 
-I have moved this section to a seperate document [GDPR and its effects](https://github.com/yakamok/keyserver-fs/blob/master/GDPR.md)
+You can also join in the discussion in the comments of an [article](https://medium.com/@mdrahony/are-pgp-key-servers-breaking-the-law-under-the-gdpr-a81ddd709d3e) i wrote to accompany this project.  
+
+I have moved this section to a seperate document [GDPR and its effects](https://github.com/yakamok/keyserver-fs/blob/master/GDPR.md)  
 
 ### Usage 
 
