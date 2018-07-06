@@ -14,6 +14,7 @@ I would be happy for people to make pull requests to add information they think 
 
 I have moved this section to a seperate document [GDPR and its effects](https://github.com/yakamok/keyserver-fs/blob/master/GDPR.md)
 
+### Usage 
 
 __Notice:__ This Program is very slow to add data to the gpg pubkey so dont plan on super large files.  
 
