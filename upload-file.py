@@ -23,7 +23,7 @@ passphrase = ''.join(random.choice(string.ascii_uppercase) for _ in range(5))
 key_server = "eu.pool.sks-keyservers.net" #any key server is good as it will propogate world wide
 
 #unattended key generation
-p = subprocess.Popen('gpg2 --pinentry loopback --batch --passphrase ' + passphrase +\
+p = subprocess.Popen('gpg2 --batch --pinentry-mode=loopback --passphrase ' + passphrase +\
                     ' --quick-gen-key "' + user_name + ' ' + email + '" rsa1024',\
                      shell=True, stdout=subprocess.PIPE)
 out, err = p.communicate()
@@ -49,7 +49,7 @@ for x in chunk_list:
     new_uid = str(i) + "@" + base64.b64encode(x)
     #below you need to use --batch  so you only have to type the password in once,
     #could not get --passphrase to work for some reason
-    p = subprocess.Popen("gpg2 --pinentry loopback --batch --passphrase " + passphrase\
+    p = subprocess.Popen("gpg2 --batch --pinentry-mode=loopback --passphrase " + passphrase\
                 + " --quick-add-uid "  + email + " " + new_uid, shell=True, stdout=subprocess.PIPE)
     out, err = p.communicate()
     i += 1
