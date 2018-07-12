@@ -60,10 +60,6 @@ This is just a proof of concept and a discussion on the potential problems of ke
 
 DO NOT USE THIS TO DO ANYTHING ILLEGAL
 
-### ToDo
-
-remove the use for pinentry by using no passwords, this is possible in GPGME.
-
 ### Notes
 
 why did i not use GPGME?  
