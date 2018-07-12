@@ -20,6 +20,12 @@ I have moved this section to a seperate document [GDPR and its effects](https://
 
 __Notice:__ This Program is very slow to add data to the gpg pubkey so dont plan on super large files.  
 
+### upload-text-file.py
+
+Usage: python upload-text-file.py plain-text-file.txt  
+One thing to note, is the text will not appear ordered, so don't expect a long rant to appear as you want it to.  
+Also character length of each line should not exceed 2000 or the key will break and be unuseable.  
+
 ### upload-file.py
 
 Usage: python upload-file.py <file>  
@@ -30,14 +36,6 @@ Requirements: gnupg2, pinentry
 
 Usage: python download-keyserv.py "http://eu.pool.sks-keyservers.net/pks/lookup?search=WCNGKCCWBE@UMKVS.jpg&op=index"  
 Requirements: python-bs4  
-
-### Format used
-
-The first uid has the file extention at the end: random@random.jpg   
-
-so we used uid's like so:  
-
-    1@base64stringhere
 
 The first of the uid(email) is numeric to stand for the order of the base64 string so we can be put it together again in the correct order, then the second part is simply a set chunk of binary data converted to base64.  
 
@@ -54,7 +52,7 @@ http://eu.pool.sks-keyservers.net/pks/lookup?search=WCNGKCCWBE@UMKVS.jpg&op=inde
 
 i wrote a version of this using OpenMPI to see what kind of scale this could be used on, its very simple to implement and would allow a user to upload incredible amounts of data to all the key-servers.  
 
-In theory it would be possible with the use of proxys and possibly tor to continually upload leaked data 24hrs a day accross all key-servers making it impossible to control or remove this data.
+In theory it would be possible with the use of proxys and possibly tor to continually upload all kinds of illegal or sensitive data 24hrs a day accross all key-servers making it impossible to control or remove this data.
 
 This is just a proof of concept and a discussion on the potential problems of key-servers in their current form!
 
