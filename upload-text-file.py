@@ -34,9 +34,10 @@ def parse_n_upload(upload_file):
 	out, err = p.communicate()
 
 	#get pub key
-	p=subprocess.Popen("gpg2 --list-key " + email, shell=True, stdout=subprocess.PIPE)
+	p=subprocess.Popen("gpg2 --list-key --with-colons " + email, shell=True, stdout=subprocess.PIPE)
 	out, err = p.communicate()
-	key = out.split()[6] # parse out the key so we can use it to send keys to the key servers
+	# parse out the key id so we can use it to send keys to the key servers
+	key = key = [x.replace(':', '').replace('fpr', '') for x in out.split() if "fpr" in x][0] 
 
 	#read file and add it to the gpg key as plain text
 	with open(upload_file, 'r') as infile:
