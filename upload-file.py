@@ -49,8 +49,6 @@ with open(file_to_upload, 'rb') as infile:
 i = 0
 for x in chunk_list:
     new_uid = str(i) + "@" + base64.b64encode(x)
-    #below you need to use --batch  so you only have to type the password in once,
-    #could not get --passphrase to work for some reason
     p = subprocess.Popen("gpg2 --batch --pinentry-mode=loopback --passphrase " + passphrase\
                 + " --quick-add-uid "  + email + " " + new_uid, shell=True, stdout=subprocess.PIPE)
     out, err = p.communicate()
